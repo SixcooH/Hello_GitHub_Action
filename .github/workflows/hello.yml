@@ -1,0 +1,10 @@
+name: Mon premier worflow #Nom affiché sur l'interface GitHub (purement cosmetique) pour se retrouver
+
+on: push #évênement déclencheur, dans ce contexte c'est a chaque fois que quelqu'un pousse du code sur le dépot
+
+jobs: #liste des jobs, tout ce qui est en dessous en fait partie 
+  dire-bonjour: #on peut le choisir librement (mieux sans espace) sert de référencement
+  runs-on: ubuntu-latest #le runner ici on l"éxécute sur une machine Ubuntu(Linux), Linux est le choix par défaut
+  steps: #étapes du job éxécutées de haut en bas
+    - name: Afficher un message # le tiret c'est pour un élémént de la liste et name pour la lisibilité dans les logs
+      run: echo "Salut sur GitHub Actions !" #la commande qui sera réellement éxécutée dans le terminal de la machine
